@@ -1,11 +1,22 @@
 return {
-    { "catppuccin/nvim" },
-    -- { "shaunsingh/nord.nvim" },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            -- colorscheme = "nord",
-            colorscheme = "catppuccin",
-        },
-    },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		opts = {
+			flavor = "mocha",
+			integrations = {
+				bufferline = true,
+			},
+		},
+		config = function()
+			vim.cmd.colorscheme("catppuccin")
+		end,
+	},
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "catppuccin",
+		},
+	},
 }
