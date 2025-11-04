@@ -1,0 +1,3 @@
+[submodule "neovim-custom"]
+	path = neovim-custom
+	url = https://github.com/Sreejith-10/neovim-custom
